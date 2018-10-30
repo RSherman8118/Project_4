@@ -1,0 +1,73 @@
+div {
+
+align-content: center;
+margin: 200px auto;
+
+
+}
+
+body {
+
+  background-color: black;
+}
+
+
+    .heart {
+      position: relative;
+      width: 100px;
+      height: 90px;
+
+animation-name: beat;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: easeInOutQuart;
+  animation-direction: alternate;
+  animation-delay: 3s;
+
+  transition: background 2s ease-in-out;
+
+    }
+
+
+
+    .heart:before,
+    .heart:after {
+      position: absolute;
+      content: "";
+      left: 50px;
+      top: 0;
+      width: 50px;
+      height: 80px;
+      background: red;
+      border-radius: 50px 50px 0 0;
+      transform: rotate(-45deg);
+      transform-origin: 0 100%;
+    }
+    .heart:after {
+      left: 0;
+      transform: rotate(45deg);
+      transform-origin: 100% 100%;
+    }
+
+
+    .heart:hover {
+  transform: rotate(20deg);
+ 
+}
+
+
+
+
+
+    @keyframes beat {
+  from {
+    transform: scale(0.5,0.5);
+  }
+
+  to {
+    transform: scale(4,4);
+
+    
+  }
+}
+

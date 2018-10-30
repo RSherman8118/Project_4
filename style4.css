@@ -1,0 +1,51 @@
+div {
+
+align-content: center;
+margin: 100px auto;
+
+
+}
+
+body {
+
+  background-color: purple;
+}
+
+.bounce {
+  height: 300px;
+  width: 300px;
+  border-radius: 200px;
+  
+ 
+  transition: background 1s linear;
+  background-color: lightblue;
+
+
+  animation-name: bounce;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: easeInBounce;
+  animation-direction: alternate;
+  animation-delay: 3s;
+}
+
+
+.bounce:hover {
+  background-color: white;
+   transform: scale(0.5,0.5);
+}
+
+
+
+@keyframes bounce {
+  from {
+    transform: translatey(-100px);
+  }
+
+  to {
+    transform: translatey(600px);
+
+    
+  }
+}
+

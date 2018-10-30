@@ -1,0 +1,74 @@
+div {
+
+align-content: center;
+margin: 100px auto;
+
+
+}
+
+body {
+
+  background-color: blue;
+}
+
+
+
+
+
+.door {
+  height: 600px;
+  width: 300px;
+    border: 20px solid black;
+ 
+
+  background-color: cyan;
+
+  padding: 400px 0px 0px 200px;
+
+  animation-name: open;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: easeInExpo;
+  animation-direction: alternate;
+  animation-delay: 2s;
+}
+
+
+.door:hover {
+ transform: rotate(-20deg);
+
+}
+
+.door:hover .door-knob {
+  background-color: red;
+  
+  
+}
+
+
+
+
+.door-knob {
+
+  width: 70px;
+  height: 70px;
+  background-color: black;
+  border-radius: 50px;
+  transition-property: background-color, transform;
+  transition-duration: 2s, 2s;
+  transition-timing-function: ease-in-out;
+  align: right;
+
+}
+
+@keyframes open {
+  from {
+    transform: skewy(00deg);
+  }
+
+  to {
+    transform: skewy(40deg);
+
+    
+  }
+}

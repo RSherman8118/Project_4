@@ -1,0 +1,81 @@
+
+div {
+
+align-content: center;
+margin: 100px auto;
+
+
+}
+
+body {
+
+  background-color: red;
+}
+
+.flex {
+  display: flex;
+  width: 800;
+
+    
+}
+
+.box {
+background-color: blue;
+
+}
+
+
+
+.outside-wheel {
+  height: 300px;
+  width: 300px;
+  border-radius: 250px;
+    border: 30px solid black;
+ 
+  transition: background 2s ease-in-out;
+  background-color: lightgray;
+
+   animation-name: drive;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-delay: 3s;
+  padding: 35px 35px 35px 35px;
+}
+
+.outside-wheel:hover {
+  transform: rotate(90deg);
+  transform: translatex(200px);
+}
+
+.outside-wheel:hover .inside-wheel {
+  background-color: red;
+  
+  
+}
+
+.inside-wheel {
+
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  border-radius: 50px;
+  transition-property: background-color, transform;
+  transition-duration: 2s, 2s;
+  transition-timing-function: ease-in-out;
+  align: center;
+
+}
+
+@keyframes drive {
+  from {
+    transform: translatex(-400px);
+  }
+
+  to {
+    transform: translatex(400px);
+
+    
+  }
+}
